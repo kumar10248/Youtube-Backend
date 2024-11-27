@@ -1,0 +1,14 @@
+{
+  "name": "utube_backend",
+  "version": "1.0.0",
+  "description": "Backend for utube",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kumar Devashish",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
