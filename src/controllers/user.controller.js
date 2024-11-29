@@ -418,5 +418,6 @@ const getUserChannelProfile= asyncHandler(async(req,res)=>{
           currentUser,
           updateAccountDetails,
             updateUserAvatar,
-            updateUserCoverImage
+            updateUserCoverImage,
+            getUserChannelProfile
         }; 
