@@ -102,7 +102,7 @@ res.status(201).json(
 //send cookies to frontend
 const {username,email,password}=req.body;
 
-if(!username || !email){
+if(!(username || email)){
     throw new ApiError(400,"Username or email is required")
 }
 
@@ -131,8 +131,8 @@ const options ={
 }
 
 return res.status(200)
-.cookie("accessToken", accessToken)
-.cookie("refreshToken", refreshToken)
+.cookie("accessToken", accessToken,options)
+.cookie("refreshToken", refreshToken,options)
 .json(
     new ApiResponse(
         200,
@@ -152,18 +152,18 @@ const logoutUser = asyncHandler(async(req,res)=>{
         refreshToken:undefined
        }
 
-    }
+    },
     {
-        new:true,
+        new:true
     
     }
-
+    )
     const options ={
         httpOnly:true,
         secure:true
     
     }
-
+    
     return res.status(200)  
     .clearCookie("accessToken",options)
     .clearCookie("refreshToken",options)
