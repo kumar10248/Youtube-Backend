@@ -36,9 +36,8 @@ const registerUser = asyncHandler(async (req, res) => {
     // remove password and refreshToken fields from the response
     //check for user creation
     //send response to frontend
-
-    const { fullName, email, username, password } = req.body
-    console.log("email: ", email);
+    const { fullName, email, username, password } = req.body; 
+   
 
     if (
         [fullName, email, username, password].some((field) =>

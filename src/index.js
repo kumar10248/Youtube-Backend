@@ -18,7 +18,8 @@ connectDB()
 })
 .catch((err)=>{
     console.log("Error: ",err);
-    throw err;
+    throw err
+  
 })
 
 
